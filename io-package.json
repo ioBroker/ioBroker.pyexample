@@ -1,14 +1,19 @@
 {
   "common": {
     "name": "pyexample",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "title": "Python Example",
-    "titleLang": { "en": "Python Example", "de": "Python-Beispiel" },
+    "titleLang": {
+      "en": "Python Example",
+      "de": "Python-Beispiel"
+    },
     "desc": {
       "en": "Example adapter written in Python",
       "de": "Beispieladapter in Python"
     },
-    "authors": ["bluefox <dogafox@gmail.com>"],
+    "authors": [
+      "bluefox <dogafox@gmail.com>"
+    ],
     "license": "MIT",
     "platform": "Javascript/Node.js",
     "runtime": "python",
@@ -18,12 +23,30 @@
     "compact": false,
     "connectionType": "local",
     "dataSource": "poll",
-    "adminUI": { "config": "json" },
+    "adminUI": {
+      "config": "json"
+    },
     "icon": "pyexample.svg",
     "type": "general",
-    "keywords": ["python", "example"],
-    "dependencies": [{ "js-controller": ">=7.0.0" }],
-    "news": { "0.0.1": { "en": "Initial example", "de": "Erstes Beispiel" } }
+    "keywords": [
+      "python",
+      "example"
+    ],
+    "dependencies": [
+      {
+        "js-controller": ">=7.0.0"
+      }
+    ],
+    "news": {
+      "0.0.1": {
+        "en": "Initial example",
+        "de": "Erstes Beispiel"
+      },
+      "0.0.2": {
+        "en": "Staleness test",
+        "de": "Test fuer veraltete Umgebung"
+      }
+    }
   },
   "native": {
     "interval": 3,
@@ -31,13 +54,24 @@
   },
   "objects": [],
   "instanceObjects": [
-    { "_id": "info", "type": "channel", "common": { "name": "Information" }, "native": {} },
+    {
+      "_id": "info",
+      "type": "channel",
+      "common": {
+        "name": "Information"
+      },
+      "native": {}
+    },
     {
       "_id": "info.connection",
       "type": "state",
       "common": {
-        "role": "indicator.connected", "name": "Connected",
-        "type": "boolean", "read": true, "write": false, "def": false
+        "role": "indicator.connected",
+        "name": "Connected",
+        "type": "boolean",
+        "read": true,
+        "write": false,
+        "def": false
       },
       "native": {}
     }
