@@ -16,10 +16,12 @@ exactly as for a Node adapter.
 
 Two things, and nothing else:
 
-- `io-package.json` carries `"runtime": "python"`. That is the marker
+- `io-package.json` sets `"platform": "Python"` instead of the usual
+  `Javascript/Node.js`. `platform` has always been the field describing what an
+  adapter is written in; it is what
   [py-controller](https://github.com/ioBroker/ioBroker.py-controller) looks for
-  when deciding what needs a virtual environment, and the one js-controller will
-  eventually use to decide how to start it.
+  when deciding what needs a virtual environment, and what js-controller uses to
+  decide how to start it.
 - `python/pyproject.toml` declares the dependencies. py-controller creates a
   venv from it under `iobroker-data/py/pyexample/`, isolated from every other
   adapter.
