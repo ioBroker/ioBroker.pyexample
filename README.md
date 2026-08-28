@@ -30,19 +30,16 @@ Everything else is an ordinary ioBroker adapter: npm package, `io-package.json`,
 `admin/jsonConfig.json`. That keeps the repository, the repo checker,
 `iobroker add`, admin updates and backups working unchanged.
 
-## Current limitation
+## Running it
 
-`common.mode` is `none`, so js-controller does not start this adapter yet — the
-branch that spawns an interpreter from the venv instead of `node` is not in the
-core yet. Until then it runs manually:
+js-controller starts, supervises and stops this adapter like any other, so
+`iobroker start pyexample.0` and `iobroker stop pyexample.0` work as usual. That
+needs a js-controller which understands `platform: "Python"`; until that support
+is released, the adapter can be started by hand from its environment:
 
 ```bash
-IOB_CONFIG=/opt/iobroker/iobroker-data/iobroker.json \
-  iobroker-data/py/pyexample/venv/bin/python -m pyexample --instance 0
+IOB_CONFIG=/opt/iobroker/iobroker-data/iobroker.json   iobroker-data/py/pyexample/venv/bin/python -m pyexample --instance 0
 ```
-
-Stopping already works the way the controller does it — set the `sigKill` state
-to `-1` and the adapter shuts down in an orderly fashion.
 
 ## Related
 

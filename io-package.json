@@ -17,7 +17,7 @@
     "license": "MIT",
     "platform": "Python",
     "main": "python/pyexample/__main__.py",
-    "mode": "none",
+    "mode": "daemon",
     "enabled": false,
     "compact": false,
     "connectionType": "local",
