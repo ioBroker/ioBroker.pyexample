@@ -1,0 +1,45 @@
+{
+  "common": {
+    "name": "pyexample",
+    "version": "0.0.1",
+    "title": "Python Example",
+    "titleLang": { "en": "Python Example", "de": "Python-Beispiel" },
+    "desc": {
+      "en": "Example adapter written in Python",
+      "de": "Beispieladapter in Python"
+    },
+    "authors": ["bluefox <dogafox@gmail.com>"],
+    "license": "MIT",
+    "platform": "Javascript/Node.js",
+    "runtime": "python",
+    "main": "python/pyexample/__main__.py",
+    "mode": "none",
+    "enabled": false,
+    "compact": false,
+    "connectionType": "local",
+    "dataSource": "poll",
+    "adminUI": { "config": "json" },
+    "icon": "pyexample.svg",
+    "type": "general",
+    "keywords": ["python", "example"],
+    "dependencies": [{ "js-controller": ">=7.0.0" }],
+    "news": { "0.0.1": { "en": "Initial example", "de": "Erstes Beispiel" } }
+  },
+  "native": {
+    "interval": 3,
+    "amplitude": 2
+  },
+  "objects": [],
+  "instanceObjects": [
+    { "_id": "info", "type": "channel", "common": { "name": "Information" }, "native": {} },
+    {
+      "_id": "info.connection",
+      "type": "state",
+      "common": {
+        "role": "indicator.connected", "name": "Connected",
+        "type": "boolean", "read": true, "write": false, "def": false
+      },
+      "native": {}
+    }
+  ]
+}

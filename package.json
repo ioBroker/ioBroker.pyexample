@@ -1,0 +1,11 @@
+{
+  "name": "iobroker.pyexample",
+  "version": "0.0.1",
+  "description": "Example ioBroker adapter written in Python",
+  "author": { "name": "bluefox", "email": "dogafox@gmail.com" },
+  "license": "MIT",
+  "keywords": ["ioBroker", "python", "example"],
+  "repository": { "type": "git", "url": "https://github.com/ioBroker/ioBroker.pyexample" },
+  "engines": { "node": ">=20" },
+  "files": ["admin/", "python/", "io-package.json", "LICENSE"]
+}

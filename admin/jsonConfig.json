@@ -1,0 +1,25 @@
+{
+  "i18n": true,
+  "type": "panel",
+  "items": {
+    "interval": {
+      "type": "number",
+      "label": "Measurement interval",
+      "help": "Seconds between two readings",
+      "min": 1,
+      "max": 3600,
+      "sm": 12,
+      "md": 6
+    },
+    "amplitude": {
+      "type": "number",
+      "label": "Amplitude",
+      "help": "Swing of the simulated temperature around 20 °C",
+      "min": 0,
+      "max": 20,
+      "newLine": true,
+      "sm": 12,
+      "md": 6
+    }
+  }
+}

@@ -1,0 +1,19 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "iobroker-pyexample"
+version = "0.0.1"
+description = "Example ioBroker adapter written in Python"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+# This is the whole dependency declaration py-controller needs: it creates a
+# venv from this file, so the adapter gets its own isolated package set.
+dependencies = ["iobroker>=0.1.1"]
+
+[project.scripts]
+iobroker-pyexample = "pyexample.__main__:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["pyexample"]
